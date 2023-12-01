@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio Bonus</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>FORMULARIO</header>
+    <main>
+        <div class="side_form">
+            <form method="post" onsubmit="return validacao()" action="send.php">
+                <label>Nome: </label>
+                <input type="text" name="nome" id="nome" maxlength="40">
+                <BR>
+                <label>Tipo do Contato: </label>
+                <select name="tipoContato" id="tipoContato" class="tipoContato">
+                    <option value="0" selected>Escolha uma opção</option>
+                    <option value="duvida">Dúvida</option>
+                    <option value="sugestao">Sugestão</option>
+                    <option value="critica">Crítica</option>
+                </select>
+                <BR>
+                <label>Telefone: </label>
+                <input type="number" name="telefone" id="telefone" placeholder="11999999999" maxlength="12">
+                <BR>
+                <label>Genero: </label>
+                <input type="radio" name="genero" id="generoMasc" value="Masculino"><span class="masc"> Masculino</span>
+                <input type="radio" name="genero" id="generoFem" value="Feminino"><span class="fem"> Feminino</span> 
+                <input type="radio" name="genero" id="generoOutro" value="Outro"><span class="outro"> Outro</span> 
+                <br>
+                <label>Mensagem: </label>
+                <textarea name="mensagem" id="mensagem" maxlength="1000" rows="4" cols="50">Digite sua mensagem</textarea>
+                <br>
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+        <div class="side_image"></div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
